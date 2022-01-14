@@ -1,0 +1,19 @@
+{
+  "name": "dashboard-comparison-v2.1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "pretest": "tsc --incremental -p tsconfig.json",
+    "test": "playwright test -c tests-out",
+    "update-snapshots": "playwright test -c tests-out --update-snapshots"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.17.2",
+    "expect-playwright": "^0.8.0",
+    "jest": "^27.4.7",
+    "jest-playwright-preset": "^1.7.0",
+    "playwright": "^1.17.2",
+    "typescript": "^4.5.4"
+  }
+}
