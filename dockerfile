@@ -17,6 +17,7 @@ RUN PASSWORD=${PASSWORD}
 
 RUN npm run pretest
 RUN npm run update-snapshots
+RUN rm -rf test-results
 
 FROM build as tests
 ENTRYPOINT ["npm", "run", "test"]

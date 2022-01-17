@@ -5,7 +5,8 @@ const config: PlaywrightTestConfig = {
     use: {
         // Tell all tests to load signed-in state from 'storageState.json'.
         storageState: 'storageState.json',
-        channel: 'chromium'
+        channel: 'chromium',
+        screenshot: 'only-on-failure',
     },
     workers: 2,
 };
