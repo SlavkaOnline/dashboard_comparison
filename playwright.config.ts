@@ -5,9 +5,13 @@ const config: PlaywrightTestConfig = {
     use: {
         // Tell all tests to load signed-in state from 'storageState.json'.
         storageState: 'storageState.json',
-        channel: 'chromium',
         screenshot: 'only-on-failure',
+        defaultBrowserType: 'chromium'
     },
+    reporter: [
+        ['experimental-allure-playwright'],
+        [process.env.CI ? 'dot' : 'line']
+    ],
     workers: 2,
 };
 export default config;

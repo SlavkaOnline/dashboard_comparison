@@ -119,3 +119,4 @@ dist
 storageState.json
 tests-out/
 test-results/
+reports/
