@@ -1,5 +1,6 @@
 #!/bin/bash
 CI=true
-status = npm run test
+npm run test
+status=$?
 npm run generate-report
 exit $status

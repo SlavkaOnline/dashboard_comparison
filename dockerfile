@@ -35,4 +35,4 @@ RUN npm run update-snapshots
 RUN rm -rf test-results
 
 FROM build as tests
-ENTRYPOINT ["ci.sh"]
+ENTRYPOINT ["/bin/bash", "./ci.sh"]
