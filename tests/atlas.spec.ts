@@ -9,8 +9,8 @@ for (const atlasPage of atlasPages) {
     test(`atlas  ${atlasPage.id}`, async ({page, browser}) => {
 
         const url = atlasPage.portal
-            ? `https://${atlasPage.portal}.${host}${atlasPage.id}`
-            : `https://${host}${atlasPage.id}`;
+            ? `https://${atlasPage.portal}.${host}/${atlasPage.id}`
+            : `https://${host}/${atlasPage.id}`;
 
         let buffer: Buffer = await getBufferToCompare(atlasPage.portal, url, browser, page,  '#site-main');
         const name = atlasPage.portal ? `${atlasPage.portal}-${atlasPage.id}.png` : `${atlasPage.id}.png`;
