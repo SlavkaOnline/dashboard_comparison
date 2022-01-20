@@ -6,7 +6,7 @@ test.setTimeout(120000);
 const atlasPages = readTestOptions('./options/atlas-pages.txt')
 
 for (const atlasPage of atlasPages) {
-    test(`atlas  ${atlasPage.id}`, async ({page, browser}) => {
+    test(`atlas ${atlasPage.portal || '' } ${atlasPage.id}`, async ({page, browser}) => {
 
         const url = atlasPage.portal
             ? `https://${atlasPage.portal}.${host}/${atlasPage.id}`

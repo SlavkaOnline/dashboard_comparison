@@ -3,4 +3,5 @@ tests-out/
 tests-results/
 report/
 allure-reports/
+allure-results/
 storageState.json
