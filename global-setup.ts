@@ -1,17 +1,7 @@
-import {chromium, FullConfig, Page} from '@playwright/test';
+import {chromium, FullConfig} from '@playwright/test';
+import {login} from "./Helper";
 
 const host = process.env.HOST;
-
-export async function login(page: Page, host: string) {
-    await page.goto(`https://${host}/sys/login`, { waitUntil: 'commit', timeout: 120000 });
-    await page.type('input[name="EMail"]', process.env.EMAIL);
-    await page.type('input[name="Password"]', process.env.PASSWORD);
-    await Promise.all(
-        [
-            page.click('input[type=submit]', { timeout: 120000 }),
-            page.waitForNavigation({waitUntil: 'networkidle'})
-        ]);
-}
 
 async function globalSetup(config: FullConfig) {
     const browser = await chromium.launch();

@@ -10,7 +10,7 @@ const config: PlaywrightTestConfig = {
     },
     reporter: [
         ['experimental-allure-playwright'],
-        [process.env.CI ? 'dot' : 'line']
+        ['list']
     ],
     workers: 2,
 };
