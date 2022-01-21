@@ -120,5 +120,5 @@ storageState.json
 tests-out/
 test-results/
 report/
-allure-reports/
+allure-report/
 allure-results/

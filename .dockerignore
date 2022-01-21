@@ -2,6 +2,6 @@ node_modules/
 tests-out/
 tests-results/
 report/
-allure-reports/
+allure-report/
 allure-results/
 storageState.json

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: allure_report_server
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./allure-report:/etc/nginx/html/
+    ports:
+      - "5051:80"
+    restart: always
